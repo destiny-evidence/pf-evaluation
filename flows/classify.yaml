@@ -1,0 +1,11 @@
+$schema: https://azuremlschemas.azureedge.net/promptflow/latest/Run.schema.json
+flow: ../classify_binary
+data: ../data/texts.jsonl
+description: Binary classification of relevance to climate and health
+tags: 
+   task: classification
+   labels: binary
+   dataset: X
+column_mapping:
+   text: "${data.text}"
+   relevance: "${data.relevance}"

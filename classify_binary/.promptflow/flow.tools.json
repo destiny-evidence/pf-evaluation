@@ -1,0 +1,22 @@
+{
+  "package": {},
+  "code": {
+    "grade.py": {
+      "type": "python",
+      "inputs": {
+        "groundtruth": {
+          "type": [
+            "string"
+          ]
+        },
+        "prediction": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "grade.py",
+      "function": "grade"
+    }
+  }
+}

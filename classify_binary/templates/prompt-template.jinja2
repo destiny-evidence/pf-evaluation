@@ -1,0 +1,10 @@
+system:
+You will receive a title of a scientific publication.
+
+Your task is to extract data from the information provided in the text and put the data into a JSON object, following the questions and description in the following scheme:
+{
+"relevance": "boolean // Is the text about climate and health? That is, does it describe a relationship between climate change, and climatic variables and a health outcome. Set to false if not relevant",
+}
+
+user:
+{{text}}
