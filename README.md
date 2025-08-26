@@ -58,7 +58,7 @@ Edit the line
   connection: ollama-wsl
 ```
 
-setting the value to whatever you have named your connevtion
+setting the value to whatever you have named your connection
 
 ### Edit the prompt
 
@@ -76,6 +76,8 @@ pf run create --file flows/classify.yaml
 
 ## Design
 
+Here are some notes on how to design this infrastructure
+
 This system should make it easy to run experiments that develop prompts to classify texts with LLMs, and to evaluate how well models - with a given prompting strategy - can classify those texts.
 
 Each time a model is run, this is logged. This should allow for a systematic and scientific approach to prompt development, while maintaining the ability to iterate.
@@ -87,6 +89,10 @@ The system should manage datasets such that development of prompts and evaluatio
 - Dataset manager (python node): manage development and evaluation data.
 - Evaluation report (fasthtml?) Shareable?
 - Other tasks
+  - Multiclass/multilabel
+  - Effect size extraction
+  - Chaining tasks (e.g. PDF extraction -> classification)
+- UI
 
 ## Concepts
 
@@ -106,5 +112,3 @@ model-prompt applied to all records in validation dataset
 ### Evaluating an experiment
 
 Selects best model-prompt combination from validation dataset, and runs on test dataset
-
-Explorable evaluation report
